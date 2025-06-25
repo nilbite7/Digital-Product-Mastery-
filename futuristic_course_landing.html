@@ -1,0 +1,738 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Product Mastery</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+      background: #0c011a;
+      color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        /* Profile Section */
+        .profile {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .profile img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 2px solid violet;
+            object-fit: cover;
+        }
+        .profile h1 {
+            font-size: 20px;
+            margin-top: 8px;
+            color: #7e3ff2;
+        }
+        .profile p {
+            font-size: 12px;
+            color: #bbb;
+        }
+
+        /* Thumbnail */
+        .thumbnail {
+            width: 100%;
+            height: 150px;
+            background: url('https://i.ibb.co/gM8CGr3q/61a75270957347f6a24a657890b57c04.jpg') no-repeat center center/cover;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        /* Title Section */
+.title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #FFFFFF;
+    text-shadow: 0 0 5px #4A19CE, 0 0 10px #4A19CE, 0 0 15px #4A19CE;
+}
+
+        /* Student Results */
+        .student-results {
+            margin: 15px 0;
+        }
+        .student-results h2 {
+            color: yellow;
+            font-size: 16px;
+        }
+        
+    .slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    padding: 10px;
+}
+
+.slide {
+    min-width: 250px;
+    max-width: 300px;
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+        .highlight {
+
+            color: #DCDCDC;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            
+        }
+        /* Testimonials */
+        .testimonials {
+            margin: 25px 0;
+        }
+        .testimonial-box {
+            background: #1E1E1E;
+            padding: 12px;
+            border-radius: 8px;
+            font-style: italic;
+            font-size: 14px;
+        }
+            .testimonial img {
+      width: 100%;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+        /* FAQ */
+        .faq {
+            margin: 25px 0;
+        }
+        .faq-item {
+            background: #1E1E1E;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .faq-answer {
+            display: none;
+            padding: 8px;
+            background: #333;
+            border-radius: 5px;
+            margin-top: 5px;
+            font-size: 13px;
+        }
+
+        /* Sticky Pricing */
+        .pricing {
+           position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #8900FF;
+            color: yellow;
+            text-align: center;
+            padding: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .pricing button {
+            background: yellow;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .profile img {
+                width: 70px;
+                height: 70px;
+            }
+            .profile h1 {
+                font-size: 18px;
+            }
+            .profile p {
+                font-size: 11px;
+            }
+            .thumbnail {
+                height: 120px;
+            }
+            .title {
+                font-size: 16px;
+            }
+            .student-results h2 {
+                font-size: 14px;
+            }
+            .slide {
+                min-width: 220px;
+                height: 130px;
+                font-size: 13px;
+            }
+            .testimonial-box {
+                font-size: 12px;
+            }
+            .faq-item {
+                font-size: 13px;
+            }
+            .faq-answer {
+                font-size: 12px;
+            }
+            .pricing {
+                font-size: 14px;
+                padding: 10px;
+            }
+            .pricing button {
+                font-size: 14px;
+            }
+                .cta-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 300px;
+      margin: 0 auto 40px;
+    }
+
+    .cta-buttons a {
+      display: block;
+      text-decoration: none;
+      background: #7e3ff2;
+      padding: 15px;
+      border-radius: 8px;
+      font-weight: bold;
+      color: #FFFFFF;
+      transition: 0.3s;
+    }
+
+    .cta-buttons a:hover {
+      background: #CB00FF;
+    }
+
+    .cta-buttons .whatsapp {
+      background: #25d366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /* MY STORY STYLING */
+    .mystory-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0px;
+                  
+    }
+
+    .mystory-container h2 {
+      color: #a96cff;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .mystory p {
+    text-align: left;
+font-family: 'Inter', 'Segoe UI', 'Helvetica', sans-serif;
+  font-size: 0.7rem;
+  line-height: 1;
+  color: #ccc; /* light grey text used on dark background */
+}
+
+    .mystory img {
+      width: 100%;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    @media (max-width: 600px) {
+      .features {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .header {
+        height: 300px;
+      }
+
+      .mystory-container h2 {
+        font-size: 1.5rem;
+      }
+
+      .mystory-container {
+        padding: 0px;
+      }
+    }
+/* Proof Notification Styles */
+.proof-notification {
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+  max-width: 360px;
+  margin: auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  z-index: 9999;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.proof-left {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.proof-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  margin-right: 14px;
+}
+
+.proof-details strong {
+  font-size: 15px;
+  color: #000;
+}
+
+.proof-details .proof-action {
+  font-size: 13px;
+  margin: 2px 0;
+  color: #444;
+}
+
+.proof-details .proof-time {
+  font-size: 12px;
+  color: #888;
+}
+
+.verified {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+  background: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: inherit;
+}
+.verified img {
+  width: 14px;
+  height: 14px;
+  margin-right: 4px;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.verified a {
+  text-decoration: none;
+  color: #2196f3 !important;
+  background: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+}
+.proof-close {
+  cursor: pointer;
+  font-size: 20px;
+  color: #aaa;
+  margin-left: 10px;
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.proof-notification {
+  animation: fadeInUp 0.5s ease-in-out;
+}
+    </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Profile Section -->
+    <div class="profile">
+      <h1>PODCASH</h1>
+      <p>Entrepreneur | Business Mentor | Digital Product Expert</p>
+    </div>
+    
+    <!-- Thumbnail -->
+    <div class="thumbnail" style="background-image: url('https://i.ibb.co/7t8x8nTw/freepik-the-style-is-3d-model-with-octane-render-volumetri-18233.jpg');"></div>
+    <!-- Title -->
+    <div class="title">
+      <h2>Build, Sell & Scale… Future of Online Business</h2>
+    </div>
+
+    <div class="cta-buttons">
+      <a href="https://payments.cashfree.com/forms/Business-blueprint">Join now (Full 1v1 program)</a>
+       <a href="https://payhip.com/b/iPw4t">Not Indian? Click Here </a>
+    <h3> Why digital product?</h3>
+
+    <!-- Highlight Section -->
+    <div class="highlight">
+      <p>Digital product selling is the top business model in 2025. The market is still growing just like dropshipping in 2019. I made over ₹1M in my first year (FY24), and you can too! With low competition and rising demand, the success rate is much higher than other saturated online businesses.
+Mastering digital products could be the best investment of your life!
+</p>
+    </div>
+
+    <!-- Student Results -->
+    <div class="student-results">
+      <h3>Student's Success</h3>
+      <div class="slider">
+        <div class="slide"><img 
+    src="https://i.ibb.co/GQwBPNQQ/Picsart-25-05-30-08-44-31-844.jpg" 
+    alt="Result1" 
+    style="display: block; -webkit-user-drag: none; user-drag: none; pointer-events: none;" 
+    oncontextmenu="return false;" 
+  /></div>
+        
+        <div class="slide"><img 
+src="https://i.ibb.co/Z73KL06/Picsart-25-05-30-23-01-28-818.jpg" 
+    alt="Result1" 
+    style="display: block; -webkit-user-drag: none; user-drag: none; pointer-events: none;" 
+    oncontextmenu="return false;" 
+  /></div>
+        <div class="slide"><img 
+src="https://i.ibb.co/HpNFJCgs/Picsart-25-05-30-23-00-38-865.jpg" 
+    alt="Result1" 
+    style="display: block; -webkit-user-drag: none; user-drag: none; pointer-events: none;" 
+    oncontextmenu="return false;" 
+  /></div>
+        <div class="slide"><img 
+src="https://i.ibb.co/SD5rtpn8/Picsart-25-05-30-22-55-34-090.jpg" 
+    alt="Result1" 
+    style="display: block; -webkit-user-drag: none; user-drag: none; pointer-events: none;" 
+    oncontextmenu="return false;" 
+  /></div>
+      </div>
+    </div>
+    <!-- Testimonials -->
+  <div class="mystory-container">
+    <h2>what you'll expect?</h2>
+    <div class="mystory">
+<div style="position: relative; display: inline-block;">
+  <img 
+    src="https://i.ibb.co/p6GYZ33D/Picsart-25-05-30-23-11-10-726.jpg" 
+    alt="Channel Analytics" 
+    style="display: block; -webkit-user-drag: none; user-drag: none; pointer-events: none;" 
+    oncontextmenu="return false;" 
+  />
+  <div 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+    oncontextmenu="return false;">
+  </div>
+</div>
+      <p>This is NOT Gambling ,Affiliate or Dropshipping. This is a completely <span style="color: yellow;">Digital Product</span> based on value and product-building-selling.</p>
+      <p>Anyone can start this – you just need a bit of <span style="color: orange;">fire</span> and the right system.</p>
+
+    <!-- FAQ -->
+    <div class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item" onclick="toggleFAQ(0)">
+        Can i do it using my phone?
+        <div class="faq-answer">You don’t need a PC to make money online that’s just a bonus. I built my income stream using nothing but my smartphone. A PC only becomes useful later if you want to scale or build a brand. But to earn? Your phone is all you need. No dropshipping, no hassle. Just real results.
+</div>
+      </div>
+      <div class="faq-item" onclick="toggleFAQ(1)">
+        Do I need any experience?
+        <div class="faq-answer">The Digital Product Selling Blueprint is built for beginners. I’ll teach you everything — from scratch to sales. You don’t need any background or online business skills. Just follow the steps, and you’re good to go.
+</div>
+      </div>
+      <div class="faq-item" onclick="toggleFAQ(2)">
+Is Organic Selling Still Effective in 2025? (Spoiler: YES)
+        <div class="faq-answer">  <p style="font-size: 13px; line-height: 1.6; margin-bottom: 20px;">
+      Organic selling means making money <strong>without spending a single rupee on ads.</strong><br>
+      It’s all about using free platforms like Instagram, YouTube, or search engines to attract buyers naturally — through content, consistency, and smart strategy.
+    </p>
+    
+    <h3 style="font-size: 14px; color: #008BA2; margin-bottom: 10px;">📈 Here's My Story</h3>
+    
+    <p style="font-size: 13px; line-height: 1.6; margin-bottom: 20px;">
+      I made <strong>94% of my income</strong> from organic sales.<br>
+      No paid ads. No big team. Just my <strong>Instagram account</strong>, some <strong>daily reels</strong>, and one digital product.
+    </p>
+    
+    <p style="font-size: 13px; line-height: 1.6; margin-bottom: 20px;">
+      People saw the content, clicked the link in my bio, and boom — I got sales.<br>
+      No course-selling, no hard pitching — just value and a smart link.
+    </p>
+
+    <blockquote style="background-color: #672FFF; border-left: 4px solid #007BFF; padding: 15px 20px; font-style: italic; margin-bottom: 20px;">
+      Fun fact? I started that account just to earn from a link in bio. <br>
+      Fast forward 11 months — I’ve got <strong>lakhs of followers</strong>, consistent income, and brands are now asking <em>me</em> for collabs.
+    </blockquote>
+    
+    <p style="font-size: 13px; font-weight: 500;">
+      That’s the power of organic selling — and I’ll teach you exactly how to do it inside the <strong style="color: #FF9500;">Digital Product Selling Blueprint</strong>.
+    </p></div>
+      </div>
+            <div class="faq-item" onclick="toggleFAQ(3)">
+        what's special?
+        <div class="faq-answer">I’m the only one offering a 15 days refund, 
+Because here’s the truth: not everyone online is out to scam you. I’m not like those “gurus” selling dreams. My approach is real — tested by me, in the trenches, when I was just 19, with limited time and almost no money to invest.
+
+If you follow the course and don’t find it valuable, you get your money back. No hassle, no excuses. That’s how confident I am in what I teach.
+
+This isn’t theory or hype — it’s a proven system.
+
+You won’t get generic advice here. Instead, I’ll give you a curated list of winning products and personalized suggestions based on what YOU actually care about. Because what works for one person won’t work for everyone.
+
+Think about it: someone passionate about fitness can multiply their earnings by selling fitness programs — but if fitness isn’t your thing, that approach won’t work. Maybe your passion is art, gaming, finance, music, coding, or skincare — whatever it is, your success depends on aligning products with your genuine interests.
+
+Now, you might wonder why this isn’t free. If I gave away these strategies without restriction, thousands more would copy them — and that means crushing competition for you. By making it paid and exclusive, I’m protecting your opportunity to succeed with less noise around you.
+
+This isn’t a fad or a get-rich-quick scheme. It’s a clear, focused path to building something real.
+
+And you’re invited to take it — risk-free.
+</div>
+      </div>
+    </div>
+  <div class="mystory-container">
+    <h2>MY STORY</h2>
+    <div class="mystory">
+      <p><strong>Iam from Kerala.</strong><br>
+      I didn’t come from a rich family. In fact, not a single relative of mine has ever run a successful busines.<br>
+      But even without a blueprint to follow, I was obsessed with the idea of online income.<br>
+I started early at 14 — launching a YouTube channel in 2019. I uploaded 231 videos, and eventually, the channel got monetized.</p>
+
+      <img src="https://i.ibb.co/67YDNtNz/Screenshot-2025-03-25-164946.png"alt="YouTube Partner Approval" />
+
+      <p>
+I’ll never forget the morning I woke up to a video that had crossed 1 lakh views. I was making ₹5–₹25 per day ($0.06–$0.30), and by 16, I had earned ₹5,000 ($60). To me, that was huge — no one around me had ever made that kind of money online.
+      </p>
+
+<div style="position: relative; display: inline-block;">
+  <img 
+    src="https://i.ibb.co/s9176WjL/Screenshot-2025-03-25-163533.png" 
+    alt="Channel Analytics" 
+    style="display: block; -webkit-user-drag: none; user-drag: none; pointer-events: none;" 
+    oncontextmenu="return false;" 
+  />
+  <div 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+    oncontextmenu="return false;">
+  </div>
+</div>
+      <p>
+But the reality hit soon.
+₹50 a day ($0.60) from YouTube wasn’t going to cut it. Even part-time jobs paid 10x more.<br> So during the COVID lockdowns, I began exploring the world of online business.</br> I paid ₹1,299 ($15.60) for a Print-on-Demand course — which felt like a huge risk at 17 — built a store, set up everything, and still got zero sales. I became more depressed than ever.and my page got only 9 followers. It was one of the lowest points in my journey.
+      </p>
+      <p>After taking a break for my 10th exams (2021), I came back to online business in 2022 (when dropshipping was booming in India). I started selling winning products and made around 20K in sales per day. But sadly, from 20K per day, we only get like 2-3K profit after all the expenses like ads, product cost, RTO, and refunds. The sales didn’t last long. After 1 month, the market got saturated, so I shifted to another product.
+
+This continued, and then I realized that it's pretty hard to get a product that customers love. People were also scamming by selling "winning product lists" that everyone was already selling.</p>
+<p>Then I shifted to selling NFTs, but I realized the market isn't guaranteed. Then selling 12 winning products throughout the year. nothing worked,
+
+Then finally into reselling iphones just using organic method. </p>
+<p>(no ad expense ) and i understand instagram algorithm. and got some sales without spending money for ads. Gained 20k followers. and made over 50k profit, but still it took me 130days to make 50k. ( 380₹/ day avg )
+
+Finally I figured out selling digital products. (10 months ago) (in both organic and market sales)
+
+At first, I was getting only 200₹-400₹ sales per day for the next 1 month. Then I tried different strategies and finally got some structured format for selling.</p>
+<p>understanding market and taking right action, I implemented those strategies on my online store, instagram page and Facebook ads to maximize both organic and paid traffic . After that, I started making 7-15K every day for 5 months, and the profit margin was insane! I was getting 85-90% profit. That turned into an average of 10K daily consistent income.
+
+Then I shifted my focus more into organic sales to even maximize more margin.
+
+I created a faceless Instagram page that matches my niche (not how to make money or money related page). I started turning my followers into my customers. 
+
+And I am so proud that I sold useful digital products to the right customers without scamming a single person and made over 19 lakhs total profit at the age of 19. In all my digital products, I put a guaranteed 7-day refund policy, and 99.5% of people never even asked for a refund. Rarely 1 in 100 sales resulted in a refund.</p>
+<div style="position: relative; display: inline-block;">
+          <img src="https://i.ibb.co/23vsTbRC/Background-Eraser-20250530-213210006.png" />
+        <img 
+    src="https://i.ibb.co/pvW4XkFf/Screenshot-20250325-192825-Photos.jpg" 
+    alt="Channel Analytics" 
+    style="display: block; -webkit-user-drag: none; user-drag: none; pointer-events: none;" 
+    oncontextmenu="return false;" 
+  />
+  <img 
+    src="https://i.ibb.co/Pv8vfpTQ/Picsart-25-05-30-22-27-25-686.jpg" 
+    alt="Channel Analytics" 
+    style="display: block; -webkit-user-drag: none; user-drag: none; pointer-events: none;" 
+    oncontextmenu="return false;" 
+  />
+  <div 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+    oncontextmenu="return false;">
+  </div>
+</div>
+<p>Made almost 100,000₹ in a single day through my instagram page (100% margin - because i spend nothing for ads) , and 350,000₹ in just 11 days (my all time top ).</p>
+
+<p>If i am doing drop shipping : i need to close almost 10lakhs sale per day in order to obtain 1lakh gross profit. but i made 1 lakhs sale and 1 lakh profit. Just because i am selling digital product organically.</p>
+<p>You will unlock extreme freedom compared to selling physical products. Since I am a student, I barely get time to do all this, but still, I made 19 lakhs profit.</p>
+<p>And all I believe is, if you master a skill in a specific area (in my case, selling digital products through instagram), you can become a beast in that. At first, it will be hard, but gradually, you will learn many things throughout the journey.</p>
+<p>I was a failure, but now I am making consistent income every day. And all because I learned the skills and strategies and implemented them perfectly in my digital product, online store, Instagram page, Facebook ads, and email marketing.
+</p>
+<p>And I finally realized that knowledge is everything when it comes to starting an online business, whether from free or paid courses</p>
+
+    </div>
+  </div>
+      <blockquote style="background-color: #000B45; border-left: 4px solid #007BFF; padding: 15px 20px; font-style: italic; margin-bottom: 20px;font-size:15px">
+          <h3>Important</h3>
+      While our course is designed to help you develop valuable skills and knowledge, Success depends on various factors, including your personal effort, time investment, and external circumstances. Our goal is to equip you with the tools and knowledge to grow and improve in every aspect of the course. Remember, your dedication and hard work are crucial to achieving the results you desire.
+    </blockquote>
+    
+    <!-- Contact -->
+    <div class="contact">
+      <h2>Refund Policy</h2>
+<div style="text-align: center; margin-top: 40px;">
+  <a href="https://www.nilbite.online/p/refund-policy-dpm.html" style="
+    background-color: #114bf2;
+    color: white;
+    padding: 14px 24px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    display: inline-block;
+    box-shadow: 0 4px 12px rgba(17, 75, 242, 0.2);
+    transition: background-color 0.3s ease;
+  " onmouseover="this.style.backgroundColor='#0d3cd0'" onmouseout="this.style.backgroundColor='#114bf2'">
+    View Refund Policy →
+  </a>
+</div>
+    </div>
+    <!-- Sticky Pricing -->
+ <div class="pricing">
+  ₹499 <del>₹1499</del> (90% OFF for 30 days)
+  <button onclick="enrollNow()">JOIN NOW</button>
+</div>
+
+<script>
+  function enrollNow() {
+    // Replace this URL with your actual payment gateway or form
+    window.location.href = "https://payments.cashfree.com/forms/Business-blueprint";
+  }
+</script>
+  </div>
+  <!-- Proof Popup -->
+  <div class="proof-notification" id="proof-notification" style="display: none;">
+    <div class="proof-left">
+      <img src="https://i.ibb.co/9HFHjWgN/download-6.png" alt="logo" class="proof-avatar" />
+      <div class="proof-details">
+        <strong id="proof-name">Amin from Switzerland</strong>
+        <p class="proof-action">Recently Purchased Digital Product Mastery Course</p>
+        <p class="proof-time">11 hours ago <span class="verified">
+          <img src="https://cdn-icons-png.flaticon.com/512/1828/1828640.png" alt="verified" />
+          <a href="https://proof.com" target="_blank">verified by Proof</a>
+        </span></p>
+      </div>
+    </div>
+    <div class="proof-close" onclick="hideProof()">×</div>
+  </div>
+
+<script>
+const proofNames = [
+  "Neha from Jaipur",
+  "Ali from Pakistan",
+  "Marcus from USA",
+  "Divya from Coimbatore",
+  "Lucia from Spain",
+  "Harshit from Lucknow",
+  "Aya from Japan",
+  "Kavya from Kochi",
+  "Mohammed from Saudi Arabia",
+  "Sneha from Bhopal",
+  "Daniel from South Africa",
+  "Aisha from Indonesia",
+  "Sundar from Tamil Nadu",
+  "Nadia from Bangladesh",
+  "Pranav from Surat",
+  "Yara from Brazil",
+  "Ibrahim from Turkey",
+  "Kiara from Goa",
+  "Haroon from Dubai",
+  "Nikita from Gujarat",
+  "Jatin from Haryana",
+  "Aarav from Punjab",
+  "Elena from France",
+  "Ritika from Nagpur",
+  "Tom from Ireland",
+  "Shreya from Mangalore",
+  "Bilal from Kuwait",
+  "Reyansh from Jammu",
+  "Linda from Nigeria",
+  "Tanvi from Patna",
+  "Yuvan from Sri Lanka",
+  "Nora from Sweden",
+  "Sahil from Rajasthan",
+  "Tanya from Indore",
+  "Krish from Bhutan",
+  "Maya from Nepal",
+  "Imran from Afghanistan",
+  "Lina from Philippines",
+  "Aditya from Chandigarh",
+  "Isha from Madhya Pradesh"
+];
+  let shownNames = [];
+
+  function getRandomName() {
+    if (shownNames.length === proofNames.length) {
+      shownNames = []; // reset when all names have been shown
+    }
+
+    let randomName;
+    do {
+      randomName = proofNames[Math.floor(Math.random() * proofNames.length)];
+    } while (shownNames.includes(randomName));
+
+    shownNames.push(randomName);
+    return randomName;
+  }
+
+  function getRandomTime() {
+    const minutes = Math.floor(Math.random() * 11); // 0–10 minutes
+    if (minutes === 0) return "just now";
+    if (minutes === 1) return "1 minute ago";
+    return `${minutes} minutes ago`;
+  }
+
+  const notification = document.getElementById("proof-notification");
+  const nameField = document.getElementById("proof-name");
+  const timeField = document.querySelector(".proof-time");
+
+  function showProof() {
+    const randomName = getRandomName();
+    const randomTime = getRandomTime();
+
+    nameField.textContent = randomName;
+    timeField.innerHTML = `${randomTime} <span class="verified">
+      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828640.png" alt="verified" />
+      <a href="https://useproof.com/verified?utm_source=verified&utm_campaign=https%3A%2F%2Fwww.nilbite.online%2F&utm_term=VUpyZk26dbQkyGC92cCwhkezOxC2&utm_content=AN" target="_blank">verified by Proof</a>
+    </span>`;
+
+    notification.style.display = "flex";
+
+    setTimeout(() => {
+      notification.style.display = "none";
+      setTimeout(showProof, 10000); // wait 10 sec for next
+    }, 5000); // show for 5 sec
+  }
+
+  function hideProof() {
+    notification.style.display = "none";
+  }
+
+  window.onload = () => setTimeout(showProof, 2000);
+</script>
+</body>
+  </html>
